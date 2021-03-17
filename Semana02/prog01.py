@@ -5,5 +5,5 @@
 #e ela retorna uma nova mensagem, para trocar na própria mensagem
 #basta ter a variável atua susbtituída
 message = 'Hello World'
-new_message message.replace('World') 
+new_message = message.replace('World','Universe') 
 print(new_message)
