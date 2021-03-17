@@ -1,7 +1,8 @@
 #Métodos são funcões que pertencem a um objeto
 #Concatenação
-#Uma outra forma, para strings longas é melhor usar uma string formatada
+#Outro método também são as mais recentes fstrings
 greeting = 'Hello'
 name = 'Ana Júlia'
-message = '{}, {}. Welcome!'.format(greeting,name) #Os {} são os placeholders, onde as variáveis serão distribuidas
+message = f'{greeting}, {name.upper()}. Welcome!'# você pode inserir a variável no próprio placeholder
+#também permite escrever códigos dentro do place holder 
 print(message)
