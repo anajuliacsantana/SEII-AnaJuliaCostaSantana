@@ -1,5 +1,9 @@
 #Métodos são funcões que pertencem a um objeto
-#Método - find
+#Método - replace
+#Trocando caracteres da string, precisamos de 2 argumentos
+#a string que será alterada e o novo caracter, 
+#e ela retorna uma nova mensagem, para trocar na própria mensagem
+#basta ter a variável atua susbtituída
 message = 'Hello World'
-print(message.find("World")) #Mostra aposição inicial do termo pesquisado
-#Localiza a string, e responde -1 para as não localizadas
+new_message message.replace('World') 
+print(new_message)
