@@ -1,5 +1,6 @@
+c
+#Métodos são funcões que pertencem a um objeto
+#Método 1 - lower/upper
 message = 'Hello World'
-print(message[0:5]) 
-#Acessando e printando um intervalo de index
-#Alternativamente apenas :5, para usar o index
-#Esse processo é slicingclear
+#print(message.lower()) ##Printa a mensagem com todos os caracteres minuscúlos
+print(message.upper()) #Printa a mensagem com caracteres em maiúsculo
