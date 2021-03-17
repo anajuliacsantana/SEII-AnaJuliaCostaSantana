@@ -1,2 +1,4 @@
 message = 'Hello World'
-print(len (message)) #para descobrir quantos caracteres a string possui
+print(message[0]) 
+#Acesando apenas um caractere, para acessar o último 
+#sempre será um index do resultado do len - 1 
