@@ -1,9 +1,7 @@
 #Métodos são funcões que pertencem a um objeto
-#Método - replace
-#Trocando caracteres da string, precisamos de 2 argumentos
-#a string que será alterada e o novo caracter, 
-#e ela retorna uma nova mensagem, para trocar na própria mensagem
-#basta ter a variável atua susbtituída
-message = 'Hello World'
-new_message = message.replace('World','Universe') 
-print(new_message)
+#Concatenação
+greeting = 'Hello'
+name = 'Ana Júlia'
+#message = greeting + name ##esta forma apenas junta as strings uma na frente a outra
+message = greeting + ', ' + name #é possível resolver adicionando um string de espaço ''
+print(message)
