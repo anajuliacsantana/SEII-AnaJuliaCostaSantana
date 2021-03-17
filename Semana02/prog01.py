@@ -1,8 +1,6 @@
-#Métodos são funcões que pertencem a um objeto
-#Concatenação
-#Outro método também são as mais recentes fstrings
 greeting = 'Hello'
 name = 'Ana Júlia'
-message = f'{greeting}, {name.upper()}. Welcome!'# você pode inserir a variável no próprio placeholder
-#também permite escrever códigos dentro do place holder 
-print(message)
+#print(dir(name)) #dá uma ampla visão dos atributos e métodos que podem ser usados.
+#Para obter mais informações a respeito da função aplicamos o help diretamente nela
+#print(help(str)) #sobre o que pode ser usado em strings
+print(help(str.lower)) #explica o que o método especifico faz, neste cado o lower
