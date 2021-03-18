@@ -1,6 +1,11 @@
 import datetime
 
-dt = datetime.datetime(2016,7,26,12,30,45,100000)
-tdelta = datetime.timedelta(hours = 12)
+dt_today = datetime.datetime.today()
+dt_now = datetime.datetime.now()
+dt_utcnow = datetime.datetime.utcnow()
 
-print(dt +tdelta)
+print(dt_today)
+
+print(dt_now)
+
+print(dt_utcnow)
