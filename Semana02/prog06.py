@@ -6,12 +6,13 @@
 #or
 #Uma ou outra informação pode ser Verdadeira
 #not
+#Operação booleana, para trocar Veradeiro para Falo e Falso para Verdadeiro
 
 user = 'Admin'
 logged_in = False
 
-if user == 'Admin' or logged_in:
-    print('Admin Page')
+if not logged_in:
+    print('Please Log In')
 else:
-    print('Bad Creds')
+    print('Welcome')
 
