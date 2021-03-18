@@ -1,6 +1,7 @@
 courses = ['History','Math','Physics','CompSci']
 
-courses.reverse()
+courses.sort()
 
 print(courses)
 
+#Organiza em ordem alfabética ou numeral crescente
