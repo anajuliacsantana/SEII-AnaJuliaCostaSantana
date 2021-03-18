@@ -1,9 +1,10 @@
 
-from my_module import *
-
+from my_module import find_index,test
+import sys
 courses = ['History','Math','Physics','CompSci']
 
 index = find_index(courses,'Math')
-print(index)
-print(test)
-#Não há como saber o que veio da função importada
+# print(index)
+# print(test)
+
+print(sys.path) # O caminho que o o import busca o modulo
