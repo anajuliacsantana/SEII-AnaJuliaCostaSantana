@@ -4,4 +4,4 @@ import pytz
 
 
 dt_mtn = datetime.datetime.now(tz=pytz.timezone('US/Mountain'))
-print(dt_mtn.isoformat())
+print(dt_mtn.strftime('%B %d, %Y'))
