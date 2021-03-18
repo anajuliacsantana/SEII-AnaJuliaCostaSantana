@@ -6,4 +6,4 @@ os.chdir('/Users/anaju/Desktop')
 
 # print(os.environ.get('HOMEPATH'))
 
-print(os.path.isdir('/tmp/fjgkdhgkd'))
+print(os.path.isfile('/tmp/fjgkdhgkd'))
