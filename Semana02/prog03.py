@@ -8,5 +8,5 @@
 # Exponent:       3 ** 2
 # Modulus:        3 % 2
 
-#abs remove o sinal de números negativos
-print(abs(-3))
+#round arredonda o sinal para o valor inteiro mais próximo
+print(round(3.75,1))
