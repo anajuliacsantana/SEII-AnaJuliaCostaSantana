@@ -1,11 +1,9 @@
-import sys 
-sys.path.append('/Users/anaju/Desktop/My-Modules')
-from my_module import find_index,test
-import sys 
+
+import random
+
+
 courses = ['History','Math','Physics','CompSci']
 
-index = find_index(courses,'Math')
-# print(index)
-# print(test)
+random_course = random.choice(courses)
 
-print(sys.path)
+print(random_course)
