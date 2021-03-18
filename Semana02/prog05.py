@@ -1,5 +1,7 @@
 
 student = {'name': 'John','age': 25,'courses':['Math', 'CompSci']}
 
-del student['age']
+age =  student.pop('age')
+
 print(student)
+print(age)
