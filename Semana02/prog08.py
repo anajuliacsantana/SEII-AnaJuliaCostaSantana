@@ -1,5 +1,5 @@
 
-def hello_func():
-   return 'Hello Funcion.' 
+def hello_func(greeting):
+   return '{} Function.' .format(greeting)
 
-print(hello_func().upper())
+print(hello_func())
