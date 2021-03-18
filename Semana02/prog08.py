@@ -1,8 +1,8 @@
 
 def hello_func():
-    pass
+    print('Hello Funcion!')
 
-print(hello_func())
+hello_func()
 
 
 
