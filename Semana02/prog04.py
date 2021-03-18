@@ -1,6 +1,6 @@
 courses = ['History','Math','Physics','CompSci']
 
-print(courses[3])
+print(courses[4])
 
 
 
