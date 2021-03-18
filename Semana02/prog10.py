@@ -6,4 +6,4 @@ os.chdir('/Users/anaju/Desktop')
 
 # print(os.environ.get('HOMEPATH'))
 
-print(os.path.exists('/tmp/test.txt'))
+print(os.path.isdir('/tmp/fjgkdhgkd'))
