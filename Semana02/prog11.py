@@ -1,6 +1,6 @@
 #File Objects
 
-with open('test.txt','r') as rf:
-   with open('test_copy.txt','w') as wf:
+with open('panda-deitado.jpg','r') as rf:
+   with open('panda-deitado-copy.jpg','w') as wf:
        for line in rf:
            wf.write(line)
