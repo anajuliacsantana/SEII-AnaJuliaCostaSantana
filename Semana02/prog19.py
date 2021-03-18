@@ -18,6 +18,6 @@ def e_sort(emp):
     return emp.salary
     #You can chhose, .name, .age, .salary
 
-s_employees = sorted(employees, key = e_sort)
+s_employees = sorted(employees, key = e_sort, reverse = True)
 
 print(s_employees)
