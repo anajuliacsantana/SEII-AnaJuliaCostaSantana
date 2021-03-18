@@ -1,4 +1,3 @@
 
-if  True:
+if  False:
     print('Conditional was True')
-    
