@@ -1,5 +1,8 @@
 import datetime
 
-d = datetime.date(2016,7,24)
-#não pode usar o 0 no número 0x
-print(d)
+tday = datetime.date.today()
+print(tday.month)
+#no código acima posso selecionar
+#ano : .year
+#dia : .day
+#mês :.month
