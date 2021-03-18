@@ -1,5 +1,5 @@
 import sys 
-sys.path.append('/Users/anaju/Desktop')
+sys.path.append('/Users/anaju/Desktop/My-Modules')
 from my_module import find_index,test
 import sys 
 courses = ['History','Math','Physics','CompSci']
