@@ -5,4 +5,4 @@ nums = [1,5,2,4,3]
 sorted_courses = sorted(courses)
 
 #print(sorted_courses)
-print(min(nums))
+print(max(nums))
