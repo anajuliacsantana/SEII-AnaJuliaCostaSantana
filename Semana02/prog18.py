@@ -9,7 +9,7 @@ import builtins
 
 # print(dir(builtins))
 
-def min():
+def my_min():
     pass
 m = min([5,1,4,2,3])
 print(m)
