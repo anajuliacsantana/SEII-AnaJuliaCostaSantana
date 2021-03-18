@@ -1,7 +1,14 @@
 
-a = [1,2,3]
-b = a
+# False Values:
+    # False
+    # None
+    # Zero of any numeric type
+    # Any empty sequence. For example, '', (), [].
+    # Any empty mapping. For example, {}.
 
-print(id (a))
-print(id(b))
-print(id(a) == id(b))
+condition = False
+
+if condition:
+    print('Evaluated to True')
+else:
+    print('Evaluated to False')
