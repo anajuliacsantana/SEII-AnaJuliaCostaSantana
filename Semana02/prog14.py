@@ -11,6 +11,6 @@ for f in os.listdir():
     #Pesquisar o atalho mostrado no vídeo
     #Alt + botaõ esquerdom mouse para selecionar
     #ctrl + shift+ alt - setas
-    print('{}-{}-{}'.format(f_num,f_course,f_title,f_ext))
+    print('{}-{}{}'.format(f_num,f_title,f_ext))
 
 
