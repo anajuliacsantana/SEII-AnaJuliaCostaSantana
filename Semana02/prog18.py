@@ -4,10 +4,10 @@ LEGB
 Local, Enclosing, Global, Built-in
 """
 
-x = 'global x'
+# x = 'global x'
 
 def test():
-    global x
+    # global x
     x = 'local x'
     #print(y)
     print(x)
