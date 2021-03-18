@@ -11,6 +11,9 @@ for f in os.listdir():
     #Pesquisar o atalho mostrado no vídeo
     #Alt + botaõ esquerdom mouse para selecionar
     #ctrl + shift+ alt - setas
-    print('{}-{}{}'.format(f_num,f_title,f_ext))
+    new_name = '{}-{}{}'.format(f_num,f_title,f_ext)
+
+    os.rename(f, new_name)
+
 
 
