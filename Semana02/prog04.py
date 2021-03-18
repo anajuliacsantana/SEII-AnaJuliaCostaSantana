@@ -1,27 +1,27 @@
 
-#tuples são não mutáveis
+# #tuples são não mutáveis
 
-# Mutable
-list_1 = ['History', 'Math', 'Physics', 'CompSci']
-list_2 = list_1
+# # Mutable
+# list_1 = ['History', 'Math', 'Physics', 'CompSci']
+# list_2 = list_1
 
-print(list_1)
-print(list_2)
+# print(list_1)
+# print(list_2)
 
-list_1[0] = 'Art'
+# list_1[0] = 'Art'
 
-print(list_1)
-print(list_2)
+# print(list_1)
+# print(list_2)
 
 
-# Immutable
-# tuple_1 = ('History', 'Math', 'Physics', 'CompSci')
-# tuple_2 = tuple_1
+#Immutable
+tuple_1 = ('History', 'Math', 'Physics', 'CompSci')
+tuple_2 = tuple_1
 
-# print(tuple_1)
-# print(tuple_2)
+print(tuple_1)
+print(tuple_2)
 
-# tuple_1[0] = 'Art'
+#tuple_1[0] = 'Art'
 
-# print(tuple_1)
-# print(tuple_2)
+print(tuple_1)
+print(tuple_2)
