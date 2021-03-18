@@ -18,6 +18,6 @@ employees = [e1,e2,e3]
 #     return emp.salary
 #     #You can chhose, .name, .age, .salary
 
-s_employees = sorted(employees, key = lambda e: e.name, reverse = True)
+s_employees = sorted(employees, key = lambda e: e.name)
 
 print(s_employees)
