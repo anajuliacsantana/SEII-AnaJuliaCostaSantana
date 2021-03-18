@@ -5,7 +5,7 @@ def student_info(*args, **kwargs):
 
 courses= ['Math', 'Art']
 info = { 'name' : 'John', 'age' : 22}
-student_info(courses,info)
+student_info(*courses,**info)
 
 
 
