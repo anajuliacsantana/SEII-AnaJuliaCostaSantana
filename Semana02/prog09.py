@@ -1,9 +1,8 @@
 
-import random
+import math
 
 
 courses = ['History','Math','Physics','CompSci']
 
-random_course = random.choice(courses)
-
-print(random_course)
+rads = math.radians(90)
+print(rads)
