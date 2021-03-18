@@ -2,8 +2,7 @@ courses = ['History','Math','Physics','CompSci']
 
 nums = [1,5,2,4,3]
 
-courses.sort(reverse = True)
-nums.sort(reverse = True)
+sorted_courses = sorted(courses)
 
-print(courses)
-print(nums)
+print(sorted_courses)
+#print(nums)
