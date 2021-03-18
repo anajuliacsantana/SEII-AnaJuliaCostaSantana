@@ -1,4 +1,4 @@
 courses = ['History','Math','Physics','CompSci']
 
-
-print('Art' in courses)
+for item in courses:
+    print(item)
