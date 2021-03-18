@@ -6,7 +6,7 @@
     # Any empty sequence. For example, '', (), [].
     # Any empty mapping. For example, {}.
 
-condition = {'Teste'}
+condition = 'Teste'
 
 if condition:
     print('Evaluated to True')
