@@ -1,11 +1,13 @@
 import datetime
+import pytz
 
-dt_today = datetime.datetime.today()
-dt_now = datetime.datetime.now()
-dt_utcnow = datetime.datetime.utcnow()
 
-print(dt_today)
 
-print(dt_now)
-
+dt_utcnow = datetime.datetime.now(tz=pytz.UTC)
 print(dt_utcnow)
+
+dt_mtn = dt_utcnow.astimezone(pytz.timezone('US/Mountain'))
+print(dt_mtn)
+
+for tz in pytz.all_timezones:
+    print(tz)
