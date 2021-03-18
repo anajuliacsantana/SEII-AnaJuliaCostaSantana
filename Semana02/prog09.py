@@ -7,4 +7,4 @@ index = find_index(courses,'Math')
 # print(index)
 # print(test)
 
-print(sys.path) # O caminho que o o import busca o modulo
+print(sys.path)
