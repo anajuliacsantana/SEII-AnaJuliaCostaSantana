@@ -10,7 +10,7 @@ for f in os.listdir():
     f_num = f_num.strip().zfill(2)
     #Pesquisar o atalho mostrado no vídeo
     #Alt + botaõ esquerdom mouse para selecionar
-    #ctrl + shift+ alt - setas
+    #ctrl + shift+ alt +setas
     new_name = '{}-{}{}'.format(f_num,f_title,f_ext)
 
     os.rename(f, new_name)
