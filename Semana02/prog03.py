@@ -8,7 +8,5 @@
 # Exponent:       3 ** 2
 # Modulus:        3 % 2
 
-num = 1
-num *= 10 #funciona nos outros operadores
-print(num)
-
+#abs remove o sinal de números negativos
+print(abs(-3))
