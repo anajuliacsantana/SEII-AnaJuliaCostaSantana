@@ -1,9 +1,5 @@
 
 def hello_func():
-   return 'Hello Funcion.' #A alteração pode ser feita apenas na função
+   return 'Hello Funcion.' 
 
-hello_func()
-hello_func()
-hello_func()
-hello_func()
-
+print(hello_func())
