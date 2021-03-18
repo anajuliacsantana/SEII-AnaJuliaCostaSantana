@@ -13,7 +13,7 @@ for f in os.listdir():
     #ctrl + shift+ alt +setas
     new_name = '{}-{}{}'.format(f_num,f_title,f_ext)
 
-    os.rename(f, new_name)
+    #os.rename(f, new_name) #deixei comentada para não alterar o arquivo novemente
 
 
 
