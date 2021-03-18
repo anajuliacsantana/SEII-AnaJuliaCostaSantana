@@ -6,9 +6,14 @@ Local, Enclosing, Global, Built-in
 
 import builtins
 
-print(dir(builtins))
+
+# print(dir(builtins))
+
+def min():
+    pass
 m = min([5,1,4,2,3])
 print(m)
+
 # x = 'global x'
 
 def test(z):
