@@ -14,10 +14,10 @@ e3 = Employee('John',43,90000)
 
 employees = [e1,e2,e3]
 
-def e_sort(emp):
-    return emp.salary
-    #You can chhose, .name, .age, .salary
+# def e_sort(emp):
+#     return emp.salary
+#     #You can chhose, .name, .age, .salary
 
-s_employees = sorted(employees, key = e_sort, reverse = True)
+s_employees = sorted(employees, key = lambda e: e.name, reverse = True)
 
 print(s_employees)
