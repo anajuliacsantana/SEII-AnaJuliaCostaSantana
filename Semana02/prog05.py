@@ -1,3 +1,3 @@
 
 student = {'name': 'John','age': 25,'courses':['Math', 'CompSci']}
-print(student['phone'])
+print(student.get('name'))
