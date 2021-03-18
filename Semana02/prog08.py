@@ -2,4 +2,5 @@
 def hello_func():
    return 'Hello Funcion.' 
 
-print(hello_func())
+# print(hello_func())
+print(len('Test'))
