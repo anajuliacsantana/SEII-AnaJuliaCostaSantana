@@ -9,6 +9,6 @@
 # Modulus:        3 % 2
 
 num = 1
-num = num + 1 
+num += 1 #O += não pode estar separado
 print(num)
 
