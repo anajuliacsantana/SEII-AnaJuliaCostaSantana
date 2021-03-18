@@ -1,6 +1,6 @@
 courses = ['History','Math','Physics','CompSci']
 
-
-courses.remove('Math')
+courses.pop()
+#Remove o último valor da lista, e retorna o valor removido
 print(courses)
 
