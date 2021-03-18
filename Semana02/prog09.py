@@ -1,8 +1,11 @@
 
-import math
+import datetime
+import calendar
 
 
 courses = ['History','Math','Physics','CompSci']
 
-rads = math.radians(90)
-print(math.sin(rads))
+today = datetime.date.today()
+print(today)
+
+print(calendar.isleap(2017))
