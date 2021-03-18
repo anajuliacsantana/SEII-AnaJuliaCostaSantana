@@ -9,7 +9,7 @@ Local, Enclosing, Global, Built-in
 def outer():
     x = 'outer x'
     def inner():
-        x = 'inner x'
+        # x = 'inner x'
         print(x)
     inner()
     print(x)
