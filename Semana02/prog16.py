@@ -17,4 +17,5 @@ with open('patrons.csv','r') as data_file:
         names.append(f"{line[0]} {line[1]}" ) 
 
 
-
+html_output +=f'<p>There are currently {len(names)} public contributors. Thank You!</p>'
+print(html_output)
