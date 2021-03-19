@@ -9,7 +9,7 @@ x = [0,1,2,3,4]
 y = [0,2,4,6,8]
 
 #Resize your Graph
-plt.figure(figsize = (5,3),dpi=300)
+plt.figure(figsize = (5,3),dpi=100)
 
 # plt.plot(x,y,label ='2x', color ='red',linewidth = 2, marker='.',linestyle = '--',markersize = 10, markeredgecolor = 'blue')
 
