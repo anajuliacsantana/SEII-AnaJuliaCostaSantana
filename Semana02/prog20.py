@@ -8,8 +8,8 @@ except Exception as e:
 else:
     print(f.read())
     f.close()
-# finally:
-#     pass
+finally:
+    pass
 
 
 
