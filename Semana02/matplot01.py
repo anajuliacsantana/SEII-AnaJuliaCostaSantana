@@ -32,4 +32,6 @@ plt.xticks([0,1,2,3])
 
 plt.legend()
 
+plt.savefig('mygraph.png', dpi = 300)
+
 plt.show()
