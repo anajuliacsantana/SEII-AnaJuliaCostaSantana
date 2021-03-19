@@ -9,7 +9,7 @@ else:
     print(f.read())
     f.close()
 finally:
-    pass
+    print("Executing Finally...")
 
 
 
