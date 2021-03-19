@@ -1,12 +1,13 @@
 
 try:
-    f = open('testfile.txt')
+    f = open('test_file.txt')
 except FileNotFoundError as e:
     print(e)
 except Exception as e:
     print(e)
-# else:
-#     pass
+else:
+    print(f.read())
+    f.close()
 # finally:
 #     pass
 
