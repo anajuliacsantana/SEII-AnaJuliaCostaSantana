@@ -2,62 +2,100 @@
 #include <string>
 #include <conio.h>
 
+
 using namespace std;
+#include "complexos.h"
 
-struct Complexo{
-    float real;
-    float imag;
-};
-
-int main ()
-{
+float soma(complexo[],int num_som,int param);
+int main (){
+    unsigned int N;
     int i;
-    cout << "Escolha qual operação"
-    Complexo num_complex[i];
-    
-    cout << "Insira o número, parte real( espaço ou enter), parte imaginária na forma retangular :";
-    cin >> num_complex[0].real;
-    cin >> num_complex[0].imag;
-    printf("Número Complexo 1: %f + %fj \n", num_complex[0].real, num_complex[0].imag);
-    printf("Número Complexo 2: %f + %fj\n", num_complex[1].real, num_complex[1].imag);
-    // cout <<"Número Complexo 1:  " <<num_complex[0].real<< "," << num_complex[0].imag<< "j" << endl;
-    // cout <<"Número Complexo 2: " <<num_complex[1].real <<"," <<num_complex[1].imag << "j" << endl;
-    
-    return 0;
-}
-int main(){
-	int op ; 
-    float vet[50];
-    int N = 50;
-   *vet=gera_numeros(vet,N, 0.5, 1.5, &random);
-    printf("Este programa realiza calculos com 50 numeros gerados aleatoriamente.");
-	do{printf("\nEscolha a operacao a ser realizada:\n[1]Somatorio \n[2]Produtorio.\n[3]Mostrar numeros\n[4]Sair\n");
+    printf("Quantos numeros?\n");
+	scanf("%u", &N);
+    getchar();
+    Complexo num_complex[N];
+    Complexo s,sub,mult,div,conv;
+    cout << "Insira o número, parte real( espaço ou enter),parte imaginária na forma retangular:\n ";
+    for(i=0;i<N;i++)
+	{   printf("Número %u: \n", i+1);
+		cin >> num_complex[i].real;
+        cin >> num_complex[i].imag;
+		}
+    int op; 
+    printf("Este programa realiza operações com números complexos");
+	do{printf("\nEscolha a operacao a ser realizada:\n[1]Soma\n[2]Subtração\n[3Multiplicação\n[4]Divisão\n[5]Conversão\n[6]Ver números escolhidos\n[7]Sair\n");
 	scanf("%d",&op);
 	switch(op){
-		case 1:
-		
-		printf("\nSoma : %f", soma( &vet[0],&vet[0] + N-1 ) );
-		break;
+		case 1:{
+    for(i=0;i<N;i++){
+        s = soma(num_complex[i], i,N);}
+        printComplex(s,1); 
+                }
+             }
+        }
+        
+
 	
 		case 2:
-		
-		printf("\nProduto: %g", produto( &vet[0], &vet[0] + N-1) );
-		break;
+		{ 
+			break;
+			}
 		
 		case 3:
+			{break;}
+			
+		case 4:
+			{break;}
+			
+		case 5:
+			{break;}
 		
-		{printf("\nNumeros:\n" );
-		for(i=0;i<51;i++)
-		{printf("%.3f ",vet[i]);
-		}}
+        case 6:
+        { for(i=0;i<N;i++){
+            printComplex(num_complex[i],i);
+        }	
+        break;}
+
 		break;
+		
 		default:
  	    {
- 		if(op!=4)
+ 		if(op!=7)
  		printf("Operacao invalida!\n");
  		break;
     }
   }	
-}while(op!=4);
-return 0 ;
+}while(op!=7);
+ 
+    return 0;
 }
+
+
+complexo soma(complexo a[],int num_som,int param){
+    complexo aux_soma;
+       do {aux_soma.real =  aux_soma.real + a[ num_som].real;
+        aux_soma.imag = aux_soma.imag + a[i].imag; 
+   }while(i<param)
+   return aux_soma;
+}
+
+complexo produto(complexo z, complexo w){
+
+    complexo aux_mult;
+
+    aux_mult.real = z.real * w.real - z.imag * w.imag;
+    aux_mult.imag = z.real * w.imag + z.imag * w.real;
+
+    return aux_mult;
+}
+
+
+void printComplex(struct complexo, int n)
+            if (num_complex.imag > 0)
+            {
+            printf("Número Complexo %d: %f + %fj \n",n+1, num_complex[i].real, num_complex[i].imag);
+            }
+            else
+            printf("Número Complexo %d: %f %fj \n",n+1, num_complex[i].real, num_complex[i].imag);
+        // cout <<"Número Complexo 1:  " <<num_complex[0].real<< "," << num_complex[0].imag<< "j" << endl; 
+     }
