@@ -5,8 +5,8 @@
 
 using namespace std;
 
-typedef struct Complexo {
+struct Complexo {
     float real;
     float imag;
-}complexo;
+};
 #endif
