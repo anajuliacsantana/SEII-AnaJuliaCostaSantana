@@ -1,4 +1,5 @@
 import time
+import multiprocessing
 
 start = time.perf_counter()
 
@@ -8,10 +9,11 @@ def do_something():
     print('Done Sleeping...')
 
 
-do_something()
-do_something()
+p1 = multiprocessing.Process(target = do_something)
+p2 =  multiprocessing.Process(target = do_something)
 
-
+p1.star()
+p2.start()
 finish = time.perf_counter()
 
 print(f'Finished in{round(finish-start,2)} second(s)')
