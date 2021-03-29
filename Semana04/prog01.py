@@ -8,15 +8,10 @@ def do_something():
     time.sleep(1)
     print('Done Sleeping...\n')
 
-t1 = threading.Thread(target=do_something)
-t2 = threading.Thread(target=do_something)
-
-t1.start()
-t2.start()
-
-t1.join()
-t2.join()
-
+for _ in range(10):
+    t = threading.Thread(target=do_something)
+    t.start()
+    
 finish = time.perf_counter()
 
 print(f'Finished in {round(finish-start,2)} seconds(s)')
