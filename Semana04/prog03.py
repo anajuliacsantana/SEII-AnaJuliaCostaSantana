@@ -8,7 +8,7 @@ def do_something():
     time.sleep(1)
     print('Done Sleeping...')
 
-if __name__ == '__main__':
+
 p1 = multiprocessing.Process(target = do_something)
 p2 = multiprocessing.Process(target = do_something)
 
