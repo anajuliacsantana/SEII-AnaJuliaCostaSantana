@@ -6,21 +6,22 @@ start = time.perf_counter()
 def do_something(seconds):
     print(f'Sleeping {seconds} second...')
     time.sleep(seconds)
-    print('Done Sleeping...')
+    return 'Done Sleeping...'
 
 with concurrent.futures.ProcessPoolExecutor() as executor:
     f1 = executor.submit(do_something,1)
-    
-processes = []
+    print(f1.result())
 
-for _ in range(10):
+# processes = []
 
-   p = multiprocessing.Process(target = do_something, args =[1.5])
-   p.start()
-   processes.append(p)
+# for _ in range(10):
 
-for process in processes:
-    process.join
+#    p = multiprocessing.Process(target = do_something, args =[1.5])
+#    p.start()
+#    processes.append(p)
+
+# for process in processes:
+#     process.join
 
 finish = time.perf_counter()
 
