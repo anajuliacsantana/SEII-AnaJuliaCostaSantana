@@ -1,4 +1,5 @@
 import time
+import concurrent.futures
 from PIL import Image, ImageFilter #bilbioteca de imagens para python
 
 img_names = [
@@ -23,9 +24,8 @@ img_names = [
 t1 = time.perf_counter() #iniciando o contador
 
 size = (1200, 1200) #tamanho em pixels das fotos que serão redimensionadas
-
-
-for img_name in img_names:
+#criar uma função que processa uma imagem:
+def process_image(img_name):
     img = Image.open(img_name) #abrindo a imagem
 
     img = img.filter(ImageFilter.GaussianBlur(15)) # passando a imagem num filtro
@@ -34,9 +34,12 @@ for img_name in img_names:
     img.save(f'processed/{img_name}') #salvando a imagem no arquivo de imagens processadas
     print(f'{img_name} was processed...') #fala qual imagem já foi porcessada
 
+with concurrent.futures.ProcessPoolExecutor() as executor:
+    executor.map(process_image, img_names)
+#mapeaia a funcção de processamento de imagem, e ele roda a função com cada item da
+#  lista de imagens, assim fazendo o programa rodar em paralelo
 
 t2 = time.perf_counter()
 
 print(f'Finished in {t2-t1} seconds')
 
-#dessa forma apenas uma foto é processada por vez
