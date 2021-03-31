@@ -19,8 +19,8 @@ img_urls = [
     'https://images.unsplash.com/photo-1550439062-609e1531270e',
     'https://images.unsplash.com/photo-1549692520-acc6669e2f0c'
 ]
-
-t1 = time.perf_counter()
+#todas as fotos que serão baixadas
+t1 = time.perf_counter() #contador 
 
 def download_image(img_url):
     img_bytes = requests.get(img_url).content
@@ -29,11 +29,14 @@ def download_image(img_url):
     with open(img_name,'wb') as img_file:
         img_file.write(img_bytes)
         print(f'{img_name} was downloaded...')
-
+# usa o def para criar uma função que baixa uma imagem por vez
 with concurrent.futures.ThreadPoolExecutor() as executor:
     executor.map(download_image,img_urls)
+#Cria um thread pooll que realiza o download de cada imagem, de forma
+# que cada um do downloads possui um thread diferente
+# e irá solicitar a execução de forma assíncrona diferente da forma que estava definido antes
+# isso permite a aceleração do processo de download
 
-
-t2 = time.perf_counter()
+t2 = time.perf_counter() # para finalizar o contador
 
 print(f'Finished in {t2-t1} seconds')
