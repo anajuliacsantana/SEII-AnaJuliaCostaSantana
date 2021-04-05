@@ -1,0 +1,2 @@
+test content for git tutorial
+Inserindo arquivos em pastas correspondentes
