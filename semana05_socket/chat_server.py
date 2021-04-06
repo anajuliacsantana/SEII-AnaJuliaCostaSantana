@@ -15,9 +15,9 @@ server = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR, 1)
 
 if len(sys.argv) != 3: 
-    print ("Correct usage: script, IP address, port number") 
+    print ("Uso correto: script, IP address, port number") 
  
-HEADER_LENGTH = 10
+HEADER_LENGTH = 2048
 IP = "127.0.0.1"
 Port = int(input('Escolha a porta -->'))
 
@@ -32,11 +32,12 @@ clients_list = []
 
 
 def clientthread(client_socket,addr):
-	conn.send("Bem vindo(a) ao chatroom!") #Mensagem de confirmação
+
+	client_socket.send("Bem vindo(a) ao chatroom!") #Mensagem de confirmação
 	
 	while True:
 		try:
-			message = client_socket.recv(HEADER_LENGTH)
+			message = client_socket.recv(2048)
 			if message:
 				print("<" + addr[0] + ">" + message)
 				message_to_send = "<" + addr[0] + "> " + message
@@ -57,13 +58,13 @@ def broadcast(message, connection):
                 remove(clients) 
 
 def remove(connection): 
-    if connection in clients_list: 
-        clients_list.remove(connection) 
+    if connection in list_clients: 
+        list_clients.remove(connection) 
   
 while True: 
 	client_socket, addr = server.accept()
-	clients_list.append(client_socket)
-	print("Nova conexão" + addr[0] + "aceita")
+	list_clients.append(client_socket)
+	print("Nova conexão" + addr[0] + " aceita")
 	start_thread(clientthread,(client_socket,addr))
 
 client_socket.close()

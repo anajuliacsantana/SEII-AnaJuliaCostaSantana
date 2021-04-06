@@ -19,54 +19,32 @@ IP = input('Insira o IP -->') #nome da máquina local inserida pelo cliente
 Port = int(input('Insira a porta -->'))#  Cliente insere a porta reservada
 ADDR = (IP, Port)
 client.connect(ADDR) 
-BUFFER_SIZE = 1024
-HEADER_LENGTH = 10
 
 
-my_username = input("Username:")
-client.setblocking(False)
 
-username = my_username.encode("utf-8")
-username_header = f"{len(username):<{HEADER_LENGTH}}".encode("utf-8")
-client_s.send(username_header+username)
+# my_username = input("Username:")
+# # client.setblocking(False)
+
+# username = my_username.encode("utf-8")
+# username_header = f"{len(username):<{HEADER_LENGTH}}".encode("utf-8")
+# client_s.send(username_header+username)
 
 
 while True:
-	sockets_list = [sys.stdin, server] 
-	read_sockets,write_socket, error_socket = select.select(sockets_list,[],[]) 
-  
-	message = input(f"{my_username} > ")
-
-	if message:
-		message = message.encode("utf-8")
-		message_header = f"{len(message):< {HEADER_LENGTH}}".encode("utf-8")
-		client_s.send(message_header + message)
-	try:
-		while True:
-			#receive things
-			username_header = client_s.recv(HEADER_LENGTH)
-			if not len(username_header):
-				print("Conncection closed by the server")
-				sys.exit()
-			username_length = int(username_length.decode("utf-8").strip())
-			username = client_s.recv(username_length).decode("utf-8")
-
-			message_header = client_s.recv(HEADER_LENGTH)
-			message_length = int(message_header.decode("utf-8").strip())
-			message = client_s.recv(message_length).decode("utf-8")
-
-			print(f"{username} > {message}")
-
-	except IOError as e :
-		if e.errno != errno.EAGAIN or e.errno != errno.EWOULDBLOCK:
-			print('Reading error',str(e))
-			sys.exit()
-		continue
-
-	except Exception as e:
-		print('General error',str(e))
-		sys.exit()
-
+	sockets_list = [sys.stdin, client] 
+	read_sockets,write_socket, error_socket = select.select(sockets_list,[],[])
+	
+	for socks in read_sockets:
+		if socks == client:
+			message = socks.recv(2048) 
+			print (message) 
+		else:
+			message = sys.stdin.readline()
+			server.send(message) 
+			sys.stdout.write("<You>")
+			sys.stdout.write(message)
+			sys.stdout.flush() 
+server.close() 
 
 
 
