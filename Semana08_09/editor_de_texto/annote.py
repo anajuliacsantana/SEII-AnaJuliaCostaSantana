@@ -1,4 +1,3 @@
-
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
@@ -43,12 +42,14 @@ class MainWindow(QMainWindow):
         open_file_action = QAction( "Abrir...", self)
         open_file_action.setStatusTip("Abrir um arquivo já existente")
         open_file_action.triggered.connect(self.abrir)
+        open_file_action.setShortcut("Ctrl+O")
         file_menu.addAction(open_file_action)
         file_toolbar.addAction(open_file_action)
         
         save_file_action = QAction("Salvar", self)
         save_file_action.setStatusTip("Salvar conteúdo")
         save_file_action.triggered.connect(self.file_save)
+        save_file_action.setShortcut("Ctrl+S")
         file_menu.addAction(save_file_action)
         file_toolbar.addAction(save_file_action)
         
@@ -57,6 +58,7 @@ class MainWindow(QMainWindow):
         saveas_file_action = QAction("Salvar Como...", self)
         saveas_file_action.setStatusTip("Salvar o conteúdo para um arquivo específico")
         saveas_file_action.triggered.connect(self.file_saveas)
+        saveas_file_action.setShortcut("Ctrl+Shift+S")
         file_menu.addAction(saveas_file_action)
         file_toolbar.addAction(saveas_file_action)
 
@@ -66,8 +68,10 @@ class MainWindow(QMainWindow):
         exit_action = QAction("Sair", self)
         exit_action.setStatusTip("Sair do editor")
         exit_action.triggered.connect(self.close)
+        exit_action.setShortcut("Ctrl+Q")
         file_menu.addAction( exit_action)
         file_toolbar.addAction( exit_action)
+
         
         self.update_title()
         self.show()
